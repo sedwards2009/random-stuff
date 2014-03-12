@@ -1,0 +1,14 @@
+{
+"name": "testapp",
+"main": "index.html",
+"js-flags": "--harmony",
+"node-remote": "localhost",
+"webkit": {
+    "plugin": true
+    },
+"window": {
+    "show": true,
+    "width": 1024,
+    "height": 800
+    }
+}

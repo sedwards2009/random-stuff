@@ -1,0 +1,27 @@
+Replication for node-webkit issue #809 
+https://github.com/rogerwang/node-webkit/issues/809
+
+Steps:
+
+1. Go to the testserver directory.
+
+2. Start the little webserver:
+    node testserver.js
+
+3. Go to a different terminal.
+
+4. Go to the testapp directory.
+
+5. Run the node-webkit app here:
+    nw .
+
+6. After the apps start, click on the "Open pop up" button.
+
+7. A pop up will open. Open the dev-tools using the toolbar.
+
+Result: The console in the dev-tools shows the error:
+
+
+Tested with node-webkit-v0.9.2-linux-x64, on Kubuntu 13.10 64bit 
+
+-- Simon Edwards <simon@simonzone.com>
