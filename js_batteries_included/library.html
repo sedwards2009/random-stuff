@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <title>Libraries for JavaScript</title>
+    <style>
+      BODY {
+        font-family: sans-serif;
+        background-color: #ffffff;
+      }
+      
+      SPAN.module {
+        font-family: monospace;
+      }
+      
+      A {
+        text-decoration: none;
+      }
+      
+      A::after {
+        content: " ";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-image: url(icon_sheet.png);
+        margin-left: 8px;
+      }
+      
+      A.node::after {
+        background-position: -32px -112px;
+      }
+      A.js::after {
+        background-position: -64px -16px;
+      }
+      A.npm::after {
+        background-position: -128px -112px;
+      }
+      BODY > OL > LI {
+        margin-top: 20px;  
+      }
+    </style>
+  </head>
+  <body>
+<h1>Libraries for JavaScript</h1>
+
+A curated list of JavaScript libraries, organised to form a one-stop-shop 'standard' library.
+
+<ol>
+<li>Data Types and Collections
+  <ul>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><span class="built-in">Array</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer"><span class="built-in">ArrayBuffer</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><span class="built-in">Boolean</span></a></li>
+    <li><a class="node" href="https://iojs.org/api/buffer.html"><span class="module">buffer</span> - Binary buffers</a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView"><span class="built-in">DataView</span></a></li>  
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date"><span class="built-in">Date</span></a></li>
+    <li><a class="npm" href="https://github.com/facebook/immutable-js"><span class="module">immutable</span> - Immutable collections</a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"><span class="built-in">Map</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><span class="built-in">Number</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><span class="built-in">Object</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><span class="built-in">Set</span></a></li>
+    <li><a class="node" href="https://iojs.org/api/smalloc.html"><span class="module">smalloc</span> - Smalloc</a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><span class="built-in">String</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray"><span class="built-in">TypedArray</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap"><span class="built-in">WeakMap</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet"><span class="built-in">WeakSet</span></a></li>
+  </ul>
+</li>
+
+<li>Language Services
+  <ul>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"><span class="built-in">Error</span> - Built-in JavaScript error types</a></li>
+    <li><a class="node" href="https://iojs.org/api/errors.html"><span class="module">errors</span> - Errors</a></li>
+    <li><a class="node" href="https://iojs.org/api/events.html"><span class="module">events</span> - Events</a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><span class="built-in">Function</span> - JavaScript Function type</a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator"><span class="built-in">Generator</span> - Generator Functions</a></li>
+    <li><a class="node" href="https://iojs.org/api/globals.html"><span class="module">globals</span> - Global objects</a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"><span class="built-in">Math</span> - Math functions</a></li>
+    <li><a class="node" href="https://iojs.org/api/modules.html"><span class="module">modules</span> - Modules</a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><span class="built-in">Promise</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler"><span class="built-in">Proxy</span></a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><span class="built-in">Symbol</span></a></li>
+  </ul>
+</li>
+
+<li>String Processing and Formatting
+  <ul>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl"><span class="built-in">Intl</span> - Internationalization API for date and number formatting</a></li>
+    <li><a class="npm" href="https://zaach.github.io/jison/"><span class="module">JISON</span> - Toolkit for building parsers for context free languages</a></li>
+    <li><a class="npm" href="http://pegjs.org/"><span class="module">PEG.js</span> - Toolkit for building top-down parsers</a></li>
+    <li><a class="js" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"><span class="built-in">RegExp</span> - Regular Expressions</a></li>
+    <li><a class="node" href="https://iojs.org/api/string_decoder.html"><span class="module">string_decoder</span> - String decoding from binary buffers</a></li>
+  </ul>
+</li>
+
+<li>File and Directory Access
+  <ul>
+    <li><a class="node" href="https://iojs.org/api/fs.html"><span class="module">fs</span> - File System</a></li>
+    <li><a class="npm" href="https://github.com/isaacs/node-glob"><span class="module">glob</span> - File name matching using globs</a></li>
+    <li><a class="node" href="https://iojs.org/api/path.html"><span class="module">path</span> - File Path</a></li>
+  </ul>
+</li>
+
+<li>Internet Protocols and Support
+  <ul>
+    <li><a class="node" href="https://iojs.org/api/dgram.html"><span class="module">dgram</span> - UDP/Datagram</a></li>
+    <li><a class="node" href="https://iojs.org/api/dns.html"><span class="module">dns</span> - DNS</a></li>
+    <li><a class="node" href="https://iojs.org/api/domain.html"><span class="module">domain</span> - Domain</a></li>
+    <li><a class="node" href="https://iojs.org/api/http.html"><span class="module">http</span> - HTTP</a></li>
+    <li><a class="node" href="https://iojs.org/api/https.html"><span class="module">https</span> - HTTPS</a></li>
+    <li><a class="node" href="https://iojs.org/api/net.html"> <span class="module">net</span> - Easy network servers</a></li>
+    <li><a class="node" href="https://iojs.org/api/tls.html"><span class="module">TLS</span> - Secure network connections</a></li>
+    <li><a class="node" href="https://iojs.org/api/url.html"><span class="module">url</span> - URL</a></li>
+  </ul>
+</li>
+
+<li>Internet Data Handling
+  <ul>
+    <li><a class="node" href="https://iojs.org/api/punycode.html"><span class="module">punycode</span></a></li>
+    <li><a class="node" href="https://iojs.org/api/querystring.html"><span class="module">querystring</span> - Query Strings</a></li>
+  </ul>
+</li>
+
+<li>Generic Operating System Services
+  <ul>
+    <li><a class="node" href="https://iojs.org/api/os.html"><span class="module">os</span> - Operating System</a></li>
+    <li><a class="node" href="https://iojs.org/api/process.html"><span class="module">process</span> - </a></li>
+    <li><a class="node" href="https://iojs.org/api/stream.html"><span class="module">stream</span> - Streams</a></li>
+    <li><a class="node" href="https://iojs.org/api/timers.html"><span class="module">timers</span> - Timers</a></li>
+  </ul>
+</li>
+
+<li>Terminal and Command line
+  <ul>
+    <li><a class="node" href="https://iojs.org/api/console.html"><span class="module">console</span> - Console</a></li>
+    <li><a class="node" href="https://iojs.org/api/readline.html"><span class="module">readline</span> - Read line</a></li>
+    <li><a class="node" href="https://iojs.org/api/tty.html"><span class="module">tty</span> - TTY</a></li>
+  </ul>
+</li>
+
+<li>Processes and Execution
+  <ul>
+    <li><a class="node" href="https://iojs.org/api/child_process.html"><span class="module">child_process</span> - Child processes</a></li>
+    <li><a class="node" href="https://iojs.org/api/cluster.html"><span class="module">cluster</span> - Cluster</a></li>
+    <li><a class="node" href="https://iojs.org/api/vm.html"><span class="module">vm</span> - Virtual Machine</a></li>
+  </ul>
+</li>
+
+<li>Development Tools
+  <ul>
+    <li><a class="node" href="https://iojs.org/api/assert.html"><span class="module">assert</span> - Assertion Testing</a></li>
+    <li><a class="node" href="https://iojs.org/api/debugger.html"><span class="module">debugger</span> - Debugger</a></li>
+    <li><a class="npm" href="https://github.com/caolan/nodeunit"><span class="module">nodeunit</span> - Unit testing</a></li>
+    <li><a class="node" href="https://iojs.org/api/repl.html"><span class="module">repl</span> - REPL</a></li>
+    <li><a class="node" href="https://iojs.org/api/v8.html"><span class="module">v8</span> - V8 JavaScript Engine</a></li>
+  </ul>
+</li>
+
+<li>
+  <ul>
+    <li><a class="node" href="https://iojs.org/api/crypto.html"><span class="module">crypto</span> - Crypto</a></li>
+    <li><a class="node" href="https://iojs.org/api/util.html"><span class="module">util</span> - Utilities</a></li>
+    <li><a class="node" href="https://iojs.org/api/zlib.html"><span class="module">zlib</span> - Zlib Compression</a></li>
+  </ul>
+</li>
+</ol>
+
+  </body>
+</html>
