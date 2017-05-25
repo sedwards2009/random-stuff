@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.dnd_container {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  background-color: #80ff80;
+}
+
+nested-container {
+  border: 2px dashed blue;
+  background-color: #8080ff;
+}
+
+</style>
+<script>
+
+function init() {
+  window.customElements.define('one-slot-container', OneSlotContainer);
+  window.customElements.define('one-slot-container-with-focusable',OneSlotContainerWithFocusable);
+}
+
+class OneSlotContainer extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open', delegatesFocus: true });
+    const div = document.createElement("DIV");
+    div.style.padding = "5px";
+    div.style.padding = "5px";
+    div.style.border = "1px solid blue";
+    div.innerHTML = `<div><slot></slot></div>`;
+    shadow.appendChild(div);
+  }
+}
+
+class OneSlotContainerWithFocusable extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open', delegatesFocus: true });
+    const div = document.createElement("DIV");
+    div.style.padding = "5px";
+    div.style.padding = "5px";
+    div.style.border = "1px solid green";
+    div.innerHTML = `<div><slot></slot><input type="text" value="This is just a text input field" /></div>`;
+    shadow.appendChild(div);
+  }
+}
+
+</script>
+</head>
+
+<body onload="init()">
+
+These green boxes should be draggable.
+
+<hr />
+
+<h2>Test case #1 [SUCCESSFUL]</h2>
+<div class="dnd_container" draggable="true"></div>
+<p>
+This green box in the root document/DOM and has draggable="true". It can be dragged.
+</p>
+
+<hr />
+
+<h2>Test case #2 [SUCCESSFUL]</h2>
+<one-slot-container>
+  <div class="dnd_container" draggable="true"></div>
+</one-slot-container>
+<p>
+This green box is in the root document/DOM and has draggable="true", but is a child of a custom elment (blue border) and shown via a slot. It can be dragged as expected.
+</p>
+
+<hr />
+
+<h2>Test case #3 [FAIL]</h2>
+<one-slot-container-with-focusable>
+  <div class="dnd_container" draggable="true"></div>
+</one-slot-container-with-focusable>
+<p>
+This green box is in the root document/DOM and has draggable="true", but is a child of a custom elment (blue border) and shown via a slot. The shadow DOM of the custom element also contains a input field which accepts focus.
+</p>
+<p>
+The green box can no longer be dragged as expected.
+</p>
+</body>
+</html>
